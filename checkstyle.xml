@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+    <property name="severity" value="error"/>
+
+
+    <!-- File length -->
+    <module name="FileLength">
+        <property name="fileExtensions" value="java"/>
+        <property name="max" value="1000"/>
+    </module>
+
+    <!-- Line length check -->
+    <module name="LineLength">
+        <property name="fileExtensions" value="java"/>
+        <property name="max" value="125"/>
+        <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://"/>
+    </module>
+
+    <!-- Checks if imports are unused -->
+    <module name="TreeWalker">
+        <module name="UnusedImports">
+            <property name="processJavadoc" value="false"/>
+        </module>
+
+        <!-- No whitespace after token -->
+        <module name="NoWhitespaceAfter">
+            <property name="tokens" value="BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS"/>
+        </module>
+
+        <!-- No whitespace before token -->
+        <module name="NoWhitespaceBefore">
+            <property name="tokens" value="COMMA, POST_DEC, POST_INC, SEMI"/>
+        </module>
+
+        <!-- Modifier order -->
+        <module name="ModifierOrder"/>
+
+        <!-- Disallow star imports -->
+        <module name="AvoidStarImport"/>
+
+        <!-- Unused local variables -->
+        <module name="UnusedLocalVariable"/>
+
+        <!-- Enable @SuppressWarnings for checkstyle violations -->
+        <module name="SuppressWarningsHolder"/>
+    </module>
+
+    <!-- Filter to honor @SuppressWarnings annotations -->
+    <module name="SuppressWarningsFilter"/>
+</module>

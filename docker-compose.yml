@@ -1,0 +1,10 @@
+services:
+  backend:
+    build:
+      context: ./world-cup-match-tracker-service
+      dockerfile: Dockerfile
+    container_name: world-cup-match-tracker-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: default

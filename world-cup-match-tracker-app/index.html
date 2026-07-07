@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup Match Tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">FIFA World Cup 2026</p>
+          <h1>Match Tracker</h1>
+          <p class="subtitle">Browse seeded match results, filter by team or stage, and inspect the latest fixtures.</p>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Match filters">
+        <label class="field">
+          <span>Team</span>
+          <input id="teamFilter" type="text" placeholder="Search team name" />
+        </label>
+
+        <label class="field">
+          <span>Date</span>
+          <input id="dateFilter" type="date" />
+        </label>
+
+        <label class="field">
+          <span>Stage</span>
+          <select id="stageFilter">
+            <option value="">All stages</option>
+            <option value="group">Group</option>
+            <option value="round of 16">Round of 16</option>
+            <option value="quarter-final">Quarter-final</option>
+            <option value="semi-final">Semi-final</option>
+            <option value="final">Final</option>
+          </select>
+        </label>
+
+        <button id="refreshButton" type="button">Refresh</button>
+      </section>
+
+      <p id="status" class="status" role="status">Loading matches…</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Home</th>
+              <th>Away</th>
+              <th>Score</th>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Stage</th>
+            </tr>
+          </thead>
+          <tbody id="matchesTableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

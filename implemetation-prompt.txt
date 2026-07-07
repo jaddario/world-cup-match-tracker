@@ -1,0 +1,37 @@
+Create a backend Java application using Spring Boot that tracks football match results for the FIFA World Cup 2026. The application must fulfil the following requirements:
+
+- Provide a clear API design with endpoints to list, search, add, and remove match results. Each match result should include teams, score, date, location, and stage (e.g. group, quarter-final).
+- Implement server-side data handling to efficiently manage a large dataset (at least 1,000 match records).
+- Use an H2 database for persistence and provide sample data for easy setup.
+- Build a lightweight, functional UI that allows users to view and filter match results by team, date, or stage. This should be under folder 'world-cup-match-tracker-app.
+- Ensure the code is readable and maintainable, with incremental commits and good Git hygiene.
+- Document the project with a README file, including setup instructions and sample data.
+- Provide options to run the application via Maven or Docker Compose.
+
+Maven
+Adding Maven repository for dependencies
+
+Ensure your Maven pom.xml includes the required repositories for all dependencies. For most Spring Boot projects, Maven Central is sufficient, but if you use dependencies from other repositories (such as JitPack or Spring Plugins), add them as follows:
+
+<repositories>
+    <repository>
+        <id>central</id>
+        <name>Maven Central Repository</name>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    <!-- Add other repositories if needed -->
+    <repository>
+        <id>spring-releases</id>
+        <name>Spring Releases</name>
+        <url>https://repo.spring.io/release</url>
+    </repository>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+Make sure all dependencies in your pom.xml are resolvable from the specified repositories.
+If you use only standard Spring Boot dependencies, Maven Central is usually sufficient.
+If you add custom or third-party libraries, include their repository URLs as shown above.
+This ensures that anyone cloning your project can build it without dependency resolution issues.
