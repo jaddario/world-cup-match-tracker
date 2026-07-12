@@ -1,3 +1,16 @@
+# IDE and editor folders
+.idea/
+.vscode/
+.settings/
+
+# Build and dependency folders
+target/
+build/
+out/
+dist/
+node_modules/
+.gradle/
+
 # Compiled class file
 *.class
 
