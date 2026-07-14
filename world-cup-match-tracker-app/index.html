@@ -42,6 +42,59 @@
         <button id="refreshButton" type="button">Refresh</button>
       </section>
 
+      <section class="create-card" aria-label="Create match form">
+        <h2>Add a match</h2>
+        <form id="createMatchForm" class="create-form">
+          <div class="form-grid">
+            <label class="field">
+              <span>Home team</span>
+              <input id="homeTeam" name="homeTeam" type="text" required />
+            </label>
+
+            <label class="field">
+              <span>Away team</span>
+              <input id="awayTeam" name="awayTeam" type="text" required />
+            </label>
+
+            <label class="field">
+              <span>Home score</span>
+              <input id="homeScore" name="homeScore" type="number" min="0" required />
+            </label>
+
+            <label class="field">
+              <span>Away score</span>
+              <input id="awayScore" name="awayScore" type="number" min="0" required />
+            </label>
+
+            <label class="field">
+              <span>Date</span>
+              <input id="matchDate" name="matchDate" type="date" required />
+            </label>
+
+            <label class="field">
+              <span>Location</span>
+              <input id="location" name="location" type="text" required />
+            </label>
+
+            <label class="field">
+              <span>Stage</span>
+              <select id="createStage" name="stage" required>
+                <option value="">Select stage</option>
+                <option value="group">Group</option>
+                <option value="round of 16">Round of 16</option>
+                <option value="quarter-final">Quarter-final</option>
+                <option value="semi-final">Semi-final</option>
+                <option value="final">Final</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button id="createMatchButton" type="submit">Create match</button>
+          </div>
+        </form>
+      </section>
+
       <p id="status" class="status" role="status">Loading matches…</p>
 
       <div class="table-wrapper">
@@ -54,6 +107,7 @@
               <th>Date</th>
               <th>Location</th>
               <th>Stage</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody id="matchesTableBody"></tbody>

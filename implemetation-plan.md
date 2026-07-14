@@ -214,9 +214,11 @@ async function loadMatches() {
 **Changes:**
 - Create a simple static UI with a filter form and a results table.
 - Fetch data from the backend and render team, score, date, location, and stage.
+- Add a lightweight form that lets the user submit a new match through `POST /api/matches`.
+- Refresh the list after a successful create so the new match appears immediately.
 - Keep the UI minimal and focused on usability rather than visual complexity.
 
-**Done when:** Opening the app displays match results and responds to team, date, and stage filters.
+**Done when:** Opening the app displays match results and responds to team, date, and stage filters, and the UI can create a new match via the API.
 
 ### Step 6: Add container and documentation support
 **Goal:** Make the project easy to run with Maven or Docker Compose and document the setup clearly.
